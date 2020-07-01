@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: "api-labs"
+    command: npm start
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/app  
+  db:
+    image: postgres
+    container_name: db-labs
+    ports: 
+      - "5432:5432"
+    environment: 
+      - POSTGRES_PASSWORD=postgres
+networks: 
+  overlay:
