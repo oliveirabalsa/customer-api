@@ -9,9 +9,11 @@ services:
       - 3000:3000
     volumes:
       - .:/usr/app  
+    depends_on:
+      - db   
   db:
     image: postgres
-    container_name: db-labs
+    container_name: db-luiza
     ports: 
       - "5432:5432"
     environment: 

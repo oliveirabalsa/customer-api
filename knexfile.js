@@ -1,56 +1,54 @@
 // Update with your config settings.
-// require('dotenv').config();
 
 module.exports = {
 
   development: {
     client: 'postgresql',
     connection: {
-      user: 'postgres',
-      host: 'db',
-      password: 'postgres',
+      // database: 'luiza',
+      host: '192.168.0.105',
+      user:     'postgres',
+      password: 'postgres'
     },
     pool: {
       min: 2,
-      max: 10,
+      max: 10
     },
     migrations: {
-      directory: './src/_shared/migrations',
-      tableName: 'knex_migrations',
-    },
-    useNullAsDefault: true,
+      tableName: 'knex_migrations'
+    }
   },
 
   staging: {
     client: 'postgresql',
     connection: {
       database: 'my_db',
-      user: 'username',
-      password: 'password',
+      user:     'username',
+      password: 'password'
     },
     pool: {
       min: 2,
-      max: 10,
+      max: 10
     },
     migrations: {
-      tableName: 'knex_migrations',
-    },
+      tableName: 'knex_migrations'
+    }
   },
 
   production: {
     client: 'postgresql',
     connection: {
       database: 'my_db',
-      user: 'username',
-      password: 'password',
+      user:     'username',
+      password: 'password'
     },
     pool: {
       min: 2,
-      max: 10,
+      max: 10
     },
     migrations: {
-      tableName: 'knex_migrations',
-    },
-  },
+      tableName: 'knex_migrations'
+    }
+  }
 
 };
