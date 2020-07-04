@@ -3,17 +3,21 @@ version: '3.8'
 services:
   app:
     build: .
-    container_name: "api-labs"
+    container_name: "api-server"
     command: npm start
     ports:
       - 3000:3000
     volumes:
       - .:/usr/app  
     depends_on:
-      - db   
+      - db
+    environment: 
+      DB_HOST: host.docker.internal
+      DB_USER: postgres
+      DB_PASS: postgres   
   db:
-    image: postgres
-    container_name: db-luiza
+    image: postgres:alpine
+    container_name: api-db
     ports: 
       - "5432:5432"
     environment: 

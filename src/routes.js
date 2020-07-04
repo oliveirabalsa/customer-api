@@ -2,10 +2,22 @@ const express = require('express');
 
 const routes = express.Router()
 const customerController = require('./controllers/customer.controller');
+const productController = require('./controllers/product.controller');
+const customerProductController = require('./controllers/customer.product.controller')
 
-routes.get('/customers', customerController.all);
-routes.post('/customers', customerController.save);
-routes.get('/customers/:id', customerController.one);
-routes.delete('/customers/:id', customerController.delete);
+routes.get('/api/customer', customerController.all);
+routes.post('/api/customer', customerController.save);
+routes.get('/api/customer/:id', customerController.one);
+routes.delete('/api/customer/:id', customerController.delete);
+
+routes.get('/api/product', productController.all);
+routes.post('/api/product', productController.save);
+routes.get('/api/product/:id', productController.one);
+routes.delete('/api/product/:id', productController.delete);
+
+routes.get('/api/customer/:id/product', customerProductController.all);
+
+
+
 
 module.exports = routes;
