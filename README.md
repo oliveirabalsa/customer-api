@@ -22,6 +22,10 @@ Cross-env - Run scripts that set and use environment variables across platforms.
 ```
 This project used a PostgreSQL database
 
+This project are online on Docker Hub:
+oliveirabalsa/api-luizalabs_app
+https://hub.docker.com/repository/docker/oliveirabalsa/api-luizalabs_app
+
 ```
 # Commands:
 ```
