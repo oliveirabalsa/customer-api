@@ -8,9 +8,9 @@ class Controller {
       const customer_id = req.params.id;
 
       const customers = await customerProductService.all(customer_id, page);
-      
-      if(!customers.length) {
-        return onNotFound(res, {message: 'Products of these customer not found'})
+
+      if (!customers.length) {
+        return onNotFound(res, { message: 'Products of these customer not found' })
       }
 
       return onSuccess(res, customers);
@@ -18,6 +18,5 @@ class Controller {
       return onError(res, { message: 'Error during get customer products', error: error.message });
     }
   }
-
 }
 module.exports = new Controller()

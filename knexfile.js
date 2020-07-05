@@ -7,7 +7,7 @@ module.exports = {
     connection: {
       // database: 'luiza',
       host: 'host.docker.internal',
-      user:     'postgres',
+      user: 'postgres',
       password: 'postgres'
     },
     pool: {
@@ -23,7 +23,7 @@ module.exports = {
     client: 'postgresql',
     connection: {
       database: 'my_db',
-      user:     'username',
+      user: 'username',
       password: 'password'
     },
     pool: {
@@ -39,7 +39,7 @@ module.exports = {
     client: 'postgresql',
     connection: {
       database: 'my_db',
-      user:     'username',
+      user: 'username',
       password: 'password'
     },
     pool: {

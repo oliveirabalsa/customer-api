@@ -3,9 +3,9 @@ const connection = require('../_shared/database/database');
 class Controller {
   async all(page) {
     return await connection('products')
-    .limit(5)
-    .offset((page - 1) * 5)
-    .select('*');
+      .limit(5)
+      .offset((page - 1) * 5)
+      .select('*');
   }
 
   async save(payload) {

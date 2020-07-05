@@ -4,7 +4,6 @@ class Auth {
   async auth(req, res, next) {
       let Authorization = req.headers.authorization;
 
-
       if(!Authorization){
         return onUnathorized(res, {message: 'Please insert the authorization'})
       }
@@ -14,12 +13,10 @@ class Auth {
       }
 
       Authorization = Authorization.replace('Basic ', '')
-      console.log(Authorization)
 
       if(Authorization != 'ZXNwZXJvcGFzc2FybmVzdGV0ZXN0ZTptZWNvbnRyYXRlbQ=='){
         return onUnathorized(res, {message: 'Authorization invalid'})
       }
-
       next()
   }
 }

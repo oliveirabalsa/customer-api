@@ -7,8 +7,8 @@ class Controller {
       const { page = 1 } = req.query;
       const products = await productService.all(page)
 
-      if(!products.length){
-        return onNotFound(res, {message: 'Products not found'})
+      if (!products.length) {
+        return onNotFound(res, { message: 'Products not found' })
       }
 
       return onSuccess(res, products);
@@ -30,12 +30,12 @@ class Controller {
       });
 
       const checkFields = requiredFields.filter((response) => {
-        if(!product.hasOwnProperty(response)){
+        if (!product.hasOwnProperty(response)) {
           return response;
         }
       });
 
-      if(checkFields.length) {
+      if (checkFields.length) {
         return onError(res, { message: `Missing fields: ${checkFields.join(', ')}` });
 
       }
