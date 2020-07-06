@@ -43,7 +43,7 @@ in header set "Authorization" that i sent on the email.
 
   CUSTOMERS
   
-  get customer
+  get /api/customer
   post /api/customer
   get /api/customer/id
   delete /api/customer/id
