@@ -4,11 +4,14 @@ services:
   app:
     build: .
     container_name: "api-server"
-    command: npm start
+    command: sh -c "npm run
+     migrate && npm start"
     ports:
       - 3000:3000
     volumes:
       - .:/usr/app  
+    links:
+      - db
     depends_on:
       - db
     environment: 
