@@ -38,9 +38,12 @@ in header set "Authorization" that i sent on the email.
 ```
 # Endpoint Router:
 ```
+  BASE URL:
+  http://localhost:3000
+
   CUSTOMERS
   
-  get /api/customer
+  get customer
   post /api/customer
   get /api/customer/id
   delete /api/customer/id
