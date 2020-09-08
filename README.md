@@ -1,4 +1,3 @@
-# api-luizalabs
 The APi was built using Node.js, Express framework to structure, PostgreSQL and Knex to database connections.
 
 # Modules use:
