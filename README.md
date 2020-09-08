@@ -68,7 +68,7 @@ Example => /customer
     {
         "id": 1,
         "name": "Leonardo",
-        "email": "labs@luiza.com"
+        "email": "leo@leo.com"
     }
 
 
@@ -82,7 +82,7 @@ Example => /customer/1
     {
         "id": 1,
         "name": "leo",
-        "email": "leo@luiza.com"
+        "email": "leo@leo.com"
     }
 ]
 
@@ -95,12 +95,12 @@ Example => /customer?page=1
     {
         "id": 1,
         "name": "Leonardo",
-        "email": "leo@luiza.com"
+        "email": "leo@leo.com"
     },
     {
         "id": 2,
         "name": "Teste",
-        "email": "teste@luiza.com"
+        "email": "teste@leo.com"
     },
 ]
 
@@ -131,7 +131,7 @@ Example => /customer/1/product
     {
         "id": 1,
         "name": "Leonardo",
-        "email": "leo@luiza.com"
+        "email": "leo@leo.com"
     }
 ]
 
